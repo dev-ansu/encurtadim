@@ -9,7 +9,7 @@ import { InputsFormEncurtar } from "./InputsFormDesencurtar";
 import { DesencurtarData, DesencurtarSchema } from "@/validations/desencurtar.validation copy";
 import { AxiosError } from "axios";
 
-export const FormDesencurtar = ({csrfToken}:{csrfToken:string})=>{
+export const FormDesencurtar = ({csrfToken}:{csrfToken:string | null})=>{
     const [originalUrl, setOriginalUrl] = useState<string>("");
 
     const desencurtar = async(data: DesencurtarData)=>{

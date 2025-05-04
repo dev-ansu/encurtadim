@@ -4,12 +4,12 @@ import { EncurtarData, EncurtarSchema } from "@/validations/encurtar.validation"
 import { toast, ToastContainer } from "react-toastify";
 import { Link2 } from "lucide-react"
 import { useState } from "react";
-import { ShortUrl } from "../../../../components/ShortUrl";
 import Form from "@/components/form";
 import { InputsFormEncurtar } from "./InputsFormEncurtar";
 import { AxiosError } from "axios";
+import { ShortUrl } from "../ShortUrl";
 
-export const FormEncurtar = ({csrfToken}: {csrfToken: string})=>{
+export const FormEncurtar = ({csrfToken}: {csrfToken: string | null})=>{
     const [shortUrl, setShortUrl] = useState<string>("");
 
     const create = async(data: EncurtarData)=>{

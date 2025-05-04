@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { FormDesencurtar } from "./components/FormDesencurtar";
 import { api } from "@/lib/api";
+import { FormDesencurtar } from "@/components/FormDesencurtar";
 
 export const metadata: Metadata = {
     title: "Desencurtar URL",
@@ -12,6 +12,6 @@ export default async function page(){
     const csrfToken = await api.get("/api/csrf")
 
     return(
-        <FormDesencurtar csrfToken={csrfToken.data.csrfToken ?? ""} />
+        <FormDesencurtar csrfToken={csrfToken.data.csrfToken} />
     )
 }
