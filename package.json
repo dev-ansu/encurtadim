@@ -30,7 +30,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "lightningcss": "^1.29.3",
     "prisma": "^6.7.0",
     "tailwindcss": "^4",
     "tsx": "^4.19.4",
