@@ -3,10 +3,10 @@ import { FormDesencurtar } from "./components/FormDesencurtar";
 import { api } from "@/lib/api";
 
 export const metadata: Metadata = {
-    title: "Encurtar URL",
+    title: "Desencurtar URL",
 };
 
-export default async function Lengthen(){
+export default async function page(){
     const csrfToken = await api.get("/api/csrf");
     
     return(

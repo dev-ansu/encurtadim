@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Encurtar URL",
 };
 
-export default async function Shorten(){
+export default async function page(){
     const csrfToken = await api.get("/api/csrf");
     
     return(
