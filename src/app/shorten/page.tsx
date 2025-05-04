@@ -10,6 +10,6 @@ export default async function page(){
     const csrfToken = await api.get("/api/csrf");
     
     return(
-        <FormEncurtar csrfToken={csrfToken.data.csrfToken} />
+        <FormEncurtar csrfToken={csrfToken.data.csrfToken ?? ""} />
     )
 }
