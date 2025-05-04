@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { api } from "@/lib/api";
-import { FormEncurtar } from "@/components/FormEncurtar";
+import { FormEncurtar } from "@/app/shorten/components/FormEncurtar";
 
 export const metadata: Metadata = {
     title: "Encurtar URL",
