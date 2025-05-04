@@ -7,9 +7,8 @@ export const metadata: Metadata = {
 };
 
 // Função para pegar o CSRF Token no servidor
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const csrfToken = await api.get("/api/csrf");
-
     return {
         props: {
             csrfToken: csrfToken.data.csrfToken,
