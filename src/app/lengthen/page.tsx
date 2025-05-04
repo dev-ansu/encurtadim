@@ -7,18 +7,11 @@ export const metadata: Metadata = {
 };
 
 // Função para pegar o CSRF Token no servidor
-export async function getStaticProps() {
-    const csrfToken = await api.get("/api/csrf");
-    return {
-        props: {
-            csrfToken: csrfToken.data.csrfToken,
-        },
-    };
-}
 
-export default async function page({ csrfToken }: { csrfToken: string }){
-    
+export default async function page(){
+    const csrfToken = await api.get("/api/csrf")
+
     return(
-        <FormDesencurtar csrfToken={csrfToken} />
+        <FormDesencurtar csrfToken={csrfToken.data.csrfToken ?? ""} />
     )
 }
