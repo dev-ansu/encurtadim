@@ -3,7 +3,7 @@ import Image from "next/image";
 import AnimateNumber from "./AnimateNumber";
 
 export default async function Home() {
-  const qtdUrlsEncurtadas = await prisma.shortUrl.count()
+  const qtdUrlsEncurtadas = await prisma.shortUrl.count();
   
   return (
       <div className="w-full flex flex-col mt-16 justify-start items-center h-screen max-h-screen overflow-hidden">
