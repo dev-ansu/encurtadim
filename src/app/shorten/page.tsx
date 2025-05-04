@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default async function page(){
-    // const csrfToken = await api.get("/api/csrf");
+    const csrfToken = await api.get("/api/csrf");
     
     return(
-        <FormEncurtar  />
+        <FormEncurtar  csrfToken={csrfToken.data.csrfToken} />
     )
 }

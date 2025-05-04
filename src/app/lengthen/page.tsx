@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 // Função para pegar o CSRF Token no servidor
 
 export default async function page(){
-    // const csrfToken = await api.get("/api/csrf")
+    const csrfToken = await api.get("/api/csrf")
 
     return(
-        <FormDesencurtar />
+        <FormDesencurtar csrfToken={csrfToken.data.csrfToken} />
     )
 }
