@@ -1,18 +1,18 @@
 import prisma from "@/lib/prisma";
 import { DesencurtarSchema } from "@/validations/desencurtar.validation copy";
 import { NextRequest, NextResponse } from "next/server";
-import csrf from "csrf";
+// import csrf from "csrf";
 
-const tokens = new csrf();
-const secret = process.env.CSRF_SECRET || tokens.secretSync();
+// const tokens = new csrf();
+// const secret = process.env.CSRF_SECRET || tokens.secretSync();
 
 export async function POST(request: NextRequest){
     try{
         const body = await request.json();
         
-        if (!tokens.verify(secret, body.csrfToken)) {
-            return NextResponse.json({ error: "Invalid CSRF token" }, { status: 403 });
-        }
+        // if (!tokens.verify(secret, body.csrfToken)) {
+        //     return NextResponse.json({ error: "Invalid CSRF token" }, { status: 403 });
+        // }
         
         const { success, data, error } = DesencurtarSchema.safeParse(body)
 

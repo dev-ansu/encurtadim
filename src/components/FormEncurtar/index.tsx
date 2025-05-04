@@ -9,7 +9,7 @@ import { InputsFormEncurtar } from "./InputsFormEncurtar";
 import { AxiosError } from "axios";
 import { ShortUrl } from "../ShortUrl";
 
-export const FormEncurtar = ({csrfToken}: {csrfToken: string | null})=>{
+export const FormEncurtar = ({csrfToken}: {csrfToken?: string | null})=>{
     const [shortUrl, setShortUrl] = useState<string>("");
 
     const create = async(data: EncurtarData)=>{
