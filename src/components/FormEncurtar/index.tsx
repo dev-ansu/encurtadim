@@ -5,9 +5,9 @@ import { toast, ToastContainer } from "react-toastify";
 import { Link2 } from "lucide-react"
 import { useState } from "react";
 import Form from "@/components/form";
-import { InputsFormEncurtar } from "./InputsFormEncurtar";
 import { AxiosError } from "axios";
-import { ShortUrl } from "../../../../components/ShortUrl";
+import { ShortUrl } from "../ShortUrl";
+import { InputsFormEncurtar } from "../FormDesencurtar/InputsFormDesencurtar";
 
 export const FormEncurtar = ({csrfToken}: {csrfToken?: string | null})=>{
     const [shortUrl, setShortUrl] = useState<string>("");
